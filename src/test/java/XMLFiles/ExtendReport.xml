@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit1" parallel="tests" thread-count="1">
+
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerAdapter"/>
+    </listeners>
+
+    <test name="LCW_Testing_1">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="Runners.ExtentReports"></class>
+        </classes>
+    </test>
+
+</suite>
+
