@@ -17,8 +17,8 @@ public class DialogContent extends Parent {
     @FindBy(css = "ul[class='menu-nav__lists']>li")
     public List<WebElement> menuList;
 
-    @FindBy(xpath = "//button[text()='Hepsini Reddet']")
-    public WebElement hepsiniReddet;
+    @FindBy(xpath = "//button[text()='Tüm Çerezleri Reddet']")
+    public WebElement tumCerezleriReddet;
 
     @FindBy(css = "input[id='search-form__input-field__search-input']")
     private WebElement inputSearch;
@@ -44,8 +44,8 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()='M']")
     public WebElement MSize;
 
-    @FindBy(xpath = "//img[@src='http://akstatic.lcwaikiki.com/Resource/Images/icon/kahve.png']")
-    private WebElement kahverengi;
+    @FindBy(xpath = "//span[text()='Kahverengi']")
+    public WebElement kahverengi;
 
     @FindBy(css = "img[class='product-image__image']")
     private WebElement firstProduct;
@@ -74,7 +74,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//span[@class='pull-right'])[2]")
     public WebElement subtotal;
 
-    @FindBy(xpath = "(//span[@class='pull-right'])[4]")
+    @FindBy(xpath = "(//span[@class='total-grand-box-amount'])[1]")
     public WebElement grandTotal;
 
     @FindBy(css = "a[title='Sil']")
@@ -106,7 +106,7 @@ public class DialogContent extends Parent {
 
     public void findAndClick(String element) {
         switch (element) {
-            case "hepsiniReddet":myElement = hepsiniReddet;break;
+            case "tumCerezleriReddet":myElement = tumCerezleriReddet;break;
             case "araButton":myElement = araButton;break;
             case "kadinClick":myElement = kadinClick;break;
             case "blazerJacket":myElement = blazerJacket;break;
@@ -142,7 +142,6 @@ public class DialogContent extends Parent {
             case "itemSize":myElement=itemSize;break;
             case "itemColor":myElement=itemColor;break;
             case "verifyBasket":myElement=verifyBasket;break;
-
 
 
         }

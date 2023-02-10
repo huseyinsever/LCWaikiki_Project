@@ -56,7 +56,7 @@ public class LCWaikiki_StepDefinitions {
         dc.findAndSend("inputSearch","Ceket");
         dc.findAndClick("araButton");
         dc.verifyText("ceketPageVerify","\"Ceket\"");
-        dc.findAndClick("hepsiniReddet");
+        dc.findAndClick("tumCerezleriReddet");
     }
 
     @And("Click on the woman button")
@@ -81,6 +81,10 @@ public class LCWaikiki_StepDefinitions {
 
     @And("Choose brown from the colors")
     public void chooseBrownFromTheColors() {
+        GWD.Bekle();
+        JavascriptExecutor js=(JavascriptExecutor)GWD.getDriver();
+        js.executeScript("arguments[0].scrollIntoView();",dc.kahverengi);
+        GWD.Bekle();
         dc.findAndClick("kahverengi");
     }
 
